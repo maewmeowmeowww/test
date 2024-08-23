@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音声合成テスト</title>
+    <title>音声再生テスト</title>
 </head>
 <body>
-    <button id="speakBtn">音声を再生</button>
+    <button id="playAudio">音声を再生</button>
+    <audio id="audio" src="sound.mp3"></audio>
 
     <script>
-        document.getElementById('speakBtn').addEventListener('click', function() {
-            const speech = new SpeechSynthesisUtterance('こんにちは、世界');
-            speech.lang = 'ja-JP';
-            window.speechSynthesis.speak(speech);
+        document.getElementById('playAudio').addEventListener('click', function() {
+            const audio = document.getElementById('audio');
+            audio.play();
         });
     </script>
 </body>
